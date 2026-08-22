@@ -1,4 +1,6 @@
-# Voyara - Intelligent Travel Planning Platform
+<div align="center">
+    # Voyara - Intelligent Travel Planning Platform
+</div>
 
 <div align="center">
   <h3>🌍 Smart Trip Planning Made Easy</h3>
@@ -116,8 +118,6 @@ This project is open source and available under the MIT License.
 ## 🙏 Acknowledgments
 
 Built with modern web technologies to make travel planning easier and more enjoyable.
-
----
 
 <div align="center">
   <p>Made with ❤️ for travelers worldwide</p>

@@ -1,5 +1,5 @@
 <div align="center">
-    <h4>Voyara - Intelligent Travel Planning Platform</h4>
+    <h1>Voyara - Intelligent Travel Planning Platform</h1>
 </div>
 
 <div align="center">

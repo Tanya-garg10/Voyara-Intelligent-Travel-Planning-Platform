@@ -1,5 +1,5 @@
 <div align="center">
-    # Voyara - Intelligent Travel Planning Platform
+    Voyara - Intelligent Travel Planning Platform
 </div>
 
 <div align="center">

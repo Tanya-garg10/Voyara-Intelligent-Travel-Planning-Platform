@@ -1,0 +1,6 @@
+{
+  "name": "Voyara – Intelligent Travel Planning Platform",
+  "description": "A modern, intelligent travel planning platform to create, personalize, budget, visualize, and share multi-city itineraries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #C2410C;
+  --primary-hover: #9A3412;
+  --primary-subtle: #FFF7ED;
+  --bg: #FBFBFA;
+  --bg-subtle: #F5F4F0;
+  --bg-card: #FFFFFF;
+  --ink: #1C1917;
+  --ink-secondary: #44403C;
+  --ink-muted: #78716C;
+  --border: #E7E5E4;
+  --border-subtle: #F5F5F4;
+  --border-focus: #C2410C;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+  }
+  
+  h1, h2, h3, h4, .font-serif-heading {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+.font-editorial-serif {
+  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+}
+
+.font-editorial-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
+.editorial-price {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  color: var(--primary);
+}
+
+.editorial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px rgba(28, 25, 23, 0.04), 0 6px 16px -4px rgba(28, 25, 23, 0.04);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.editorial-card:hover {
+  border-color: #D6D3D1;
+  box-shadow: 0 4px 12px rgba(28, 25, 23, 0.06), 0 12px 24px -4px rgba(28, 25, 23, 0.08);
+}
+
+.luxury-hero-gradient {
+  background: linear-gradient(180deg, rgba(28, 25, 23, 0.1) 0%, rgba(28, 25, 23, 0.6) 50%, rgba(28, 25, 23, 0.95) 100%);
+}
+
+.luxury-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(231, 229, 228, 0.8);
+}
+
+.luxury-glass-dark {
+  background: rgba(28, 25, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-line {
+  background: linear-gradient(180deg, #C2410C 0%, #E7E5E4 70%, #E7E5E4 100%);
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes modalEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes backdropFade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes formItemCascade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-modal-backdrop {
+  animation: backdropFade 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-modal-container {
+  animation: modalEntrance 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-form-switch {
+  animation: formFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-field-1 {
+  animation: formItemCascade 0.28s cubic-bezier(0.16, 1, 0.3, 1) 0.04s forwards;
+}
+
+.animate-field-2 {
+  animation: formItemCascade 0.28s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
+}
+
+.animate-field-3 {
+  animation: formItemCascade 0.28s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+}
+
+.animate-field-4 {
+  animation: formItemCascade 0.28s cubic-bezier(0.16, 1, 0.3, 1) 0.16s forwards;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom subtle scrollbars for panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E7E5E4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D6D3D1;
+}
